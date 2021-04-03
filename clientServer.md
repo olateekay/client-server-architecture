@@ -6,26 +6,26 @@ On `Dbserver` Linux Server install MySQL Server software
 
 `sudo apt update`
 
-![alt text](image1.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image1.png)
 
 Install mysql-server
 
 `sudo apt install mysql-server -y`
 
-![alt text](image2.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image2.png
 
 Enable the mysql service
 
 `sudo systemctl enable mysql`
 
-![alt text](image3.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image3.png)
 
 
 On `Client` Linux Server install MySQL Client software
 
 `sudo apt update`
 
-![alt text](image4.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image4.png)
 
 Install mysql-client
 
@@ -33,7 +33,7 @@ Install mysql-client
 
 By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. Use mysql server's local IP address to connect from Client. MySQL server uses TCP port 3306 by default, so you will have to open it by creating a new entry in ‘Inbound rules’ in ‘DbServer’ Security Groups. For extra security, do not allow all IP addresses to reach your ‘DbServer’ - allow access only to the specific local IP address of your ‘Client’.
 
-![alt text](image5.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image5.png)
 
 Ensure  that mysql installation on `DbServer` is secure by running this;
 
@@ -41,27 +41,27 @@ Ensure  that mysql installation on `DbServer` is secure by running this;
 
 for this use case, we will not be validating password.Select no when prompted for password validation, then set password. Select yes for  the quetions  that follows afterwards.
 
-![alt text](image6.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image6.png)
 
-![alt text](image7.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image7.png)
 
 start mysql 
 
 `sudo mysql`
 
-![alt text](image8.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image8.png)
 
 Create user
-![alt text](image9.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image9.png)
 
 Create database
-![alt text](image10.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image10.png)
 
 Grant permissions
-![alt text](image11.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image11.png)
 
 Flush privileges
-![alt text](image12.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image12.png)
 
 You might need to configure MySQL server to allow connections from remote hosts.
 Run this
@@ -70,13 +70,13 @@ Run this
 
 Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
 
-![alt text](image13.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image13.png)
 
 Restart mysql 
 
 `sudo systemctl restart mysql`
 
-![alt text](image14.jpg)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image14.png)
 
 From `Client` Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
 
@@ -84,11 +84,11 @@ Run this command;
 
 `sudo mysql -u remote_user -h *DbServer ip*  -p`
 
-![alt text](image15.jpg)
+![alt text](ihttps://github.com/olateekay/client-server-architecture/blob/main/images/image15.png)
 
 Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
 
 `Show databases;`
 
-![alt text](image16.jpg)
+![alt text](ihttps://github.com/olateekay/client-server-architecture/blob/main/images/image16.png)
 
