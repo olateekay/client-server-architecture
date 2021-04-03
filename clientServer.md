@@ -40,3 +40,23 @@ Ensure  that mysql installation on `DbServer` is secure by running this;
 `sudo mysql_secure_installation`
 
 ![alt text](image6.jpg)
+
+![alt text](image7.jpg)
+
+start mysql 
+
+`sudo mysql`
+
+![alt text](image8.jpg)
+
+Create user
+![alt text](image9.jpg)
+
+Create database
+![alt text](image10.jpg)
+
+Grant permissions
+![alt text](image11.jpg)
+
+Flush privileges
+![alt text](image12.jpg)
