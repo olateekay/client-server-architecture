@@ -60,3 +60,18 @@ Grant permissions
 
 Flush privileges
 ![alt text](image12.jpg)
+
+You might need to configure MySQL server to allow connections from remote hosts.
+Run this
+
+`sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf `
+
+Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
+
+![alt text](image13.jpg)
+
+Restart mysql 
+
+`sudo systemctl restart mysql`
+
+![alt text](image14.jpg)
