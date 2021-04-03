@@ -39,6 +39,8 @@ Ensure  that mysql installation on `DbServer` is secure by running this;
 
 `sudo mysql_secure_installation`
 
+for this use case, we will not be validating password.Select no when prompted for password validation, then set password. Select yes for  the quetions  that follows afterwards.
+
 ![alt text](image6.jpg)
 
 ![alt text](image7.jpg)
@@ -75,3 +77,18 @@ Restart mysql
 `sudo systemctl restart mysql`
 
 ![alt text](image14.jpg)
+
+From `Client` Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
+
+Run this command;
+
+`sudo mysql -u remote_user -h *DbServer ip*  -p`
+
+![alt text](image15.jpg)
+
+Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
+
+`Show databases;`
+
+![alt text](image16.jpg)
+
