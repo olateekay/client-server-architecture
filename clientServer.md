@@ -84,11 +84,11 @@ Run this command;
 
 `sudo mysql -u remote_user -h *DbServer ip*  -p`
 
-![alt text](ihttps://github.com/olateekay/client-server-architecture/blob/main/images/image15.png)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image15.png)
 
 Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
 
 `Show databases;`
 
-![alt text](ihttps://github.com/olateekay/client-server-architecture/blob/main/images/image16.png)
+![alt text](https://github.com/olateekay/client-server-architecture/blob/main/images/image16.png)
 
